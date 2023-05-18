@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional, List
 
-from item.base import Item
-from item.weapon import Weapon
-from item.armor import Armor
+# from item.base import Item
+# from item.weapon import Weapon
+# from item.armor import Armor
 
 
 @dataclass
@@ -17,9 +17,9 @@ class Character:
     strength: int = field(repr=False, default=1)
     intelligence: int = field(repr=False, default=1)
     dexterity: int = field(repr=False, default=1)
-    weapons: List[Weapon] = field(repr=False, default_factory=list)
-    items: List[Item] = field(repr=False, default_factory=list)
-    armor: List[Armor] = field(repr=False, default_factory=list)
+    # weapons: List[Weapon] = field(repr=False, default_factory=list)
+    # items: List[Item] = field(repr=False, default_factory=list)
+    # armor: List[Armor] = field(repr=False, default_factory=list)
 
     def __post_init__(self) -> None:
         self.health = self.max_health
