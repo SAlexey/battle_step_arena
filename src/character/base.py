@@ -1,6 +1,12 @@
 from dataclasses import dataclass, field
+
+
 @dataclass
 class Character:
+    """
+    Base character class
+    """
+
     name: str = field(repr=True)
     type: str = field(repr=True)
     health: int = field(repr=False, default=0)
