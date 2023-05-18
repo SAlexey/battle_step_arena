@@ -7,17 +7,27 @@ class Character:
     Base character class
     """
 
+    # the character's name
     name: str = field(repr=True)
+    # the character's type
     type: str = field(repr=True)
+    # the character's health
     health: int = field(repr=False, default=0)
+    # the character's maximum health
     max_health: int = field(repr=False, default=100)
+    # the character's level
     level: int = field(repr=True, default=1)
+    # the character's experience
     experience: int = field(repr=False, default=0)
+    # the character's strength
     strength: int = field(repr=False, default=1)
+    # the character's intelligence
     intelligence: int = field(repr=False, default=1)
+    # the character's dexterity
     dexterity: int = field(repr=False, default=1)
 
     def __post_init__(self) -> None:
+        # at initialization, set the character's health to the maximum
         self.health = self.max_health
 
     @property
